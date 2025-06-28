@@ -62,6 +62,7 @@ uploads/
 # Temporarily exclude large video files for quick deployment
 images/Hero Videos/*.mp4
 images/Busses Stock/*.mp4
+images/Busses Stock/12230153_3840_2160_25fps.mp4
 
 # Keep other files for client demo
 # Videos can be re-added later with LFS 
