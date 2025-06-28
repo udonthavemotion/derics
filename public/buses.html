@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wheelz - Wheelz Of Fadez</title>
+    <meta name="description" content="Explore our luxury fleet with authentic Louisiana Mardi Gras vibes! Premium party buses designed for the ultimate NOLA celebration experience.">
+    
+    <!-- Favicon Links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favico/favicon-16x16.png">
+    <link rel="manifest" href="images/favico/site.webmanifest">
+    <link rel="shortcut icon" href="images/favico/favicon.ico">
+    <meta name="theme-color" content="#6f2c91">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/buses.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>🎭 Wheelz Of Fadez</h2>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="buses.html" class="nav-link active">Our Buses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="booking.html" class="nav-link">Book Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pricing.html" class="nav-link">Pricing & FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Mobile Menu Toggle -->
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section for Buses Page -->
+    <section class="hero buses-hero">
+        <!-- Video temporarily disabled for deployment - can be re-enabled later -->
+        <!--
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="images/Hero Videos/4012942-hd_1920_1080_30fps.mp4" type="video/mp4">
+                <source src="images/Hero Videos/2524607-uhd_3840_2160_24fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-video-overlay"></div>
+        </div>
+        -->
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Our Wheelz Collection</h1>
+                    <p class="hero-subtitle">🎭 Discover our luxury fleet where every ride brings Mardi Gras magic! Premium buses with authentic Louisiana style and party perfection.</p>
+                    
+                    <nav class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span class="separator">›</span>
+                        <span>Our Wheelz</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <h3>Filter by:</h3>
+                <div class="filter-group">
+                    <div class="filter-item">
+                        <label for="capacity-filter">Passenger Capacity:</label>
+                        <select id="capacity-filter">
+                            <option value="all">All Sizes</option>
+                            <option value="small">10-20 passengers</option>
+                            <option value="medium">21-30 passengers</option>
+                            <option value="large">30+ passengers</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-item">
+                        <label for="price-filter">Price Range:</label>
+                        <select id="price-filter">
+                            <option value="all">All Prices</option>
+                            <option value="budget">Under $150/hour</option>
+                            <option value="mid">$150-$175/hour</option>
+                            <option value="premium">$175+ /hour</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-item">
+                        <label for="amenity-filter">Special Features:</label>
+                        <select id="amenity-filter">
+                            <option value="all">All Features</option>
+                            <option value="dance">Dance Floor</option>
+                            <option value="vip">VIP Seating</option>
+                            <option value="bar">Premium Bar</option>
+                            <option value="karaoke">Karaoke System</option>
+                        </select>
+                    </div>
+                    
+                    <button class="filter-reset" id="reset-filters">
+                        <i class="fas fa-refresh"></i> Reset Filters
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buses Grid Section -->
+    <section class="buses-grid">
+        <div class="container">
+            <div class="buses-container" id="buses-container">
+                <!-- Buses will be loaded here by JavaScript -->
+                <div class="loading-placeholder">
+                    <div class="spinner"></div>
+                    <p>Loading our amazing party buses...</p>
+                </div>
+            </div>
+            
+            <!-- No Results Message -->
+            <div class="no-results" id="no-results" style="display: none;">
+                <div class="no-results-content">
+                    <i class="fas fa-search"></i>
+                    <h3>No buses found</h3>
+                    <p>Try adjusting your filters or <a href="#" id="clear-filters">clear all filters</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Roll with Wheelz Of Fadez?</h2>
+                <p>🎭 Let our Louisiana party experts help you choose the perfect ride for your celebration! Laissez les bons temps rouler!</p>
+                <div class="cta-buttons">
+                    <a href="booking.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-calendar-check"></i> Start Booking
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary btn-large">
+                        <i class="fas fa-phone"></i> Get Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🎭 Wheelz Of Fadez</h3>
+                    <p>Louisiana's premier party bus experience! Bringing Mardi Gras vibes and luxury together for unforgettable celebrations on wheels.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="buses.html">Our Buses</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> (504) WHEELZ-1</p>
+                        <p><i class="fas fa-envelope"></i> party@wheelzoffadez.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> New Orleans, Louisiana</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Wheelz Of Fadez. All rights reserved. | Louisiana's Premier Party Experience</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bus Details Modal -->
+    <div class="modal" id="bus-details-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-bus-name">Bus Details</h2>
+                <button class="modal-close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-bus-image" src="" alt="">
+                </div>
+                
+                <div class="modal-details">
+                    <div class="bus-specs-modal">
+                        <div class="spec">
+                            <i class="fas fa-users"></i>
+                            <span>Capacity: <strong id="modal-capacity"></strong></span>
+                        </div>
+                        <div class="spec">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>Rate: <strong id="modal-rate"></strong></span>
+                        </div>
+                        <div class="spec">
+                            <i class="fas fa-clock"></i>
+                            <span>Min Rental: <strong>3 hours</strong></span>
+                        </div>
+                    </div>
+                    
+                    <div class="amenities-modal">
+                        <h4>Amenities & Features:</h4>
+                        <ul id="modal-amenities"></ul>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <a href="#" class="btn btn-primary" id="modal-book-btn">
+                            <i class="fas fa-calendar-alt"></i> Book This Bus
+                        </a>
+                        <a href="contact.html" class="btn btn-outline">
+                            <i class="fas fa-phone"></i> Get Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/featured-bus.js"></script>
+    <script src="js/buses.js"></script>
+</body>
+</html> 

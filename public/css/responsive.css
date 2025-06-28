@@ -1,0 +1,363 @@
+/* ==========================================================================
+   Responsive Design - Mobile and Tablet Styles
+   ========================================================================== */
+
+/* Tablet Styles (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero-buttons .btn {
+        width: 250px;
+        justify-content: center;
+    }
+
+    .featured-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .featured-image {
+        order: -1;
+    }
+
+    .overview-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+}
+
+/* Mobile Styles (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    /* Navigation Mobile */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--shadow-medium);
+        padding: 2rem 0;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Typography Mobile */
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.25rem; }
+
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .hero-buttons .btn {
+        width: 280px;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+    }
+
+    /* Hero Features Mobile */
+    .hero-features {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 400px;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    .feature-card i {
+        font-size: 2rem;
+    }
+
+    /* Sections Mobile */
+    .overview {
+        padding: 4rem 0;
+    }
+
+    .featured-bus {
+        padding: 4rem 0;
+    }
+
+    .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .overview-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1.5rem;
+    }
+
+    .card-icon i {
+        font-size: 1.5rem;
+    }
+
+    /* Featured Bus Mobile */
+    .featured-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .featured-details h3 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .bus-specs {
+        margin-bottom: 1.5rem;
+    }
+
+    .amenities ul {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .featured-actions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .featured-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* CTA Section Mobile */
+    .cta-section {
+        padding: 4rem 0;
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .cta-content p {
+        font-size: 1.1rem;
+    }
+
+    /* Footer Mobile */
+    .footer {
+        padding: 3rem 0 1.5rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .contact-info p {
+        justify-content: center;
+    }
+}
+
+/* Small Mobile Styles (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        padding: 0.875rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .btn-large {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    .feature-card {
+        padding: 1rem;
+    }
+
+    .overview-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+    }
+
+    .featured-details h3 {
+        font-size: 1.5rem;
+    }
+
+    .cta-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+    }
+
+    .footer-section h3,
+    .footer-section h4 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Extra Small Mobile (max-width: 360px) */
+@media screen and (max-width: 360px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .nav-container {
+        padding: 0 10px;
+    }
+
+    .nav-logo h2 {
+        font-size: 1.25rem;
+    }
+
+    .hero-buttons .btn,
+    .featured-actions .btn {
+        font-size: 0.85rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .overview {
+        padding: 3rem 0;
+    }
+
+    .featured-bus {
+        padding: 3rem 0;
+    }
+
+    .cta-section {
+        padding: 3rem 0;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .nav-toggle,
+    .hero-buttons,
+    .featured-actions,
+    .cta-section,
+    .footer {
+        display: none;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: #000;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 2rem 0;
+        background: none;
+    }
+
+    .hero-title,
+    .hero-subtitle {
+        color: #000;
+    }
+
+    .overview,
+    .featured-bus {
+        padding: 2rem 0;
+    }
+
+    .section-header h2 {
+        color: #000;
+        border-bottom: 2px solid #000;
+        padding-bottom: 0.5rem;
+    }
+} 
